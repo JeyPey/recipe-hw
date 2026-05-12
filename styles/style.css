@@ -1,0 +1,21 @@
+@import url("./fonts.css");
+
+:root {
+  --color-text: #5f564d;
+  --color-heading: #312e2c;
+  --color-accent: #854632;
+  --color-preparation-text: #7a284e;
+  --color-preparation-bg: #fff7fb;
+  --color-hr: #e3ddd7;
+  --color-bg: #f3e5d7;
+
+  --ff-base: "Outfit", sans-serif;
+  --ff-heading: "YoungSerif", serif;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--color-hr);
+  margin: 32px 0;
+}
