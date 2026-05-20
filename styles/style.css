@@ -19,6 +19,7 @@ h1 {
   font-weight: 400;
   font-size: 32px;
   color: var(--color-heading);
+  margin: 0;
 }
 
 h2 {
@@ -26,6 +27,7 @@ h2 {
   font-weight: 400;
   font-size: 28px;
   color: var(--color-accent);
+  margin: 0;
 }
 
 hr {
@@ -64,10 +66,15 @@ body {
   margin-block: 24px 32px;
 }
 
+.recipe-card__subtitle {
+  margin-block-end: 24px;
+}
+
 .preparation {
   background-color: var(--color-preparation-bg);
   padding: 24px;
   border-radius: 12px;
+  margin-bottom: 32px;
 }
 
 .preparation__title {
@@ -75,7 +82,7 @@ body {
   font-weight: 600;
   font-size: 20px;
   margin: 0;
-  padding-block-end: 16px;
+  margin-block-end: 16px;
 }
 
 .preparation-list {
@@ -149,7 +156,9 @@ body {
   font-weight: 700;
 }
 
-
+.nutrition__text {
+  margin-block: 24px;
+}
 
 .nutrition-table {
   width: 100%;
