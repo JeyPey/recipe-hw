@@ -7,7 +7,7 @@
   --color-preparation-text: #7a284e;
   --color-preparation-bg: #fff7fb;
   --color-hr: #e3ddd7;
-  --color-bg-card: #FFFFFF;
+  --color-bg-card: #ffffff;
   --color-bg: #f3e5d7;
 
   --ff-base: "Outfit", sans-serif;
@@ -23,6 +23,7 @@ h1 {
 
 h2 {
   font-family: var(--ff-heading);
+  font-weight: 400;
   font-size: 28px;
   color: var(--color-accent);
 }
@@ -31,7 +32,6 @@ hr {
   border: none;
   height: 1px;
   background-color: var(--color-hr);
-  margin: 32px 0;
 }
 
 body {
@@ -40,6 +40,10 @@ body {
   line-height: 150%;
   color: var(--color-text);
   background-color: var(--color-bg);
+}
+
+.separator {
+  margin: 32px 0;
 }
 
 .recipe-card {
@@ -75,15 +79,112 @@ body {
 }
 
 .preparation-list {
+  list-style: none;
   margin: 0;
-  padding-inline-start: 22px;
+  padding-inline-start: 6px;
 }
 
 .preparation-item {
+  position: relative;
   margin-block-end: 8px;
-  padding-inline-start: 18px;
+  padding-inline-start: 35px;
+}
+
+.preparation-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-preparation-text);
+  border-radius: 50%;
 }
 
 .preparation-item::marker {
   color: var(--color-preparation-text);
+}
+
+.ingredients-list {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 6px;
+}
+
+.ingredients-item {
+  position: relative;
+  margin-block-end: 8px;
+  padding-inline-start: 32px;
+}
+
+.ingredients-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+.ingredients-item::marker {
+  color: var(--color-accent);
+}
+
+.instructions-list {
+  margin: 0;
+  padding-inline-start: 24px;
+}
+
+.instructions-item {
+  padding-inline-start: 16px;
+  margin-block-end: 8px;
+}
+
+.instructions-item::marker {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+.nutrition-table__row:not(:last-child) {
+  border-bottom: 1px solid var(--color-hr);
+}
+
+
+.nutrition-table__value {
+  padding-inline-end: 32px;
+  padding-block: 12px; 
+}
+
+.nutrition-table__label {
+  padding-inline-start: 32px;
+  padding-inline-end: 16px;
+  padding-block: 12px; 
+}
+
+
+.nutrition-table__label {
+  width: 50%; 
+}
+
+.nutrition-table__value {
+  width: 50%;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.nutrition-table__row:last-child .nutrition-table__label,
+.nutrition-table__row:last-child .nutrition-table__value {
+  padding-bottom: 0;
 }
