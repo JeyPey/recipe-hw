@@ -173,18 +173,12 @@ body {
 
 .nutrition-table__value {
   padding-inline-end: 32px;
-  padding-block: 12px; 
 }
-
-.nutrition-table__label {
-  padding-inline-start: 32px;
-  padding-inline-end: 16px;
-  padding-block: 12px; 
-}
-
 
 .nutrition-table__label {
   width: 50%; 
+  padding-inline-start: 32px;
+  padding-inline-end: 16px;
 }
 
 .nutrition-table__value {
@@ -193,7 +187,15 @@ body {
   font-weight: 700;
 }
 
-.nutrition-table__row:last-child .nutrition-table__label,
+/* .nutrition-table__row:last-child .nutrition-table__label,
 .nutrition-table__row:last-child .nutrition-table__value {
   padding-bottom: 0;
+} старий варіант  */
+
+.nutrition-table__row td {
+  padding-top: 12px;
+}
+
+.nutrition-table__row:not(:last-child) td {
+  padding-bottom: 12px;
 }
