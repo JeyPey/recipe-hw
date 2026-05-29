@@ -183,6 +183,7 @@ body {
 
 .nutrition-table__value {
   width: 50%;
+  padding-inline-end: 32px;
   color: var(--color-accent);
   font-weight: 700;
 }
@@ -192,7 +193,16 @@ body {
   padding-bottom: 0;
 } старий варіант  */
 
-.nutrition-table__row td {
+/* .nutrition-table__row td {
+  padding-top: 12px;
+} */
+
+/* .nutrition-table__row:not(:last-child) td {
+  padding-bottom: 12px;
+} старий варіант v2.0 :D */
+
+
+.nutrition-table__row:not(:first-child) td {
   padding-top: 12px;
 }
 
